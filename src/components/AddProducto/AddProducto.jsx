@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import { DataContext } from '../../Context/DataProvider';
 import { useContext } from 'react';
-
+import logo  from '../../images/logo.png';
 
 
 export const AddProducto = () => {
@@ -65,17 +65,20 @@ export const AddProducto = () => {
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Descripción</Form.Label>
-                        <Form.Control onChange={handleDescripcion} type="text" placeholder="Por favor coloque el nombre del producto" name='descripcion'  />
+                        <Form.Control onChange={handleDescripcion} type="text" placeholder="Por favor coloque la descripcion del producto" name='descripcion'  />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Valor</Form.Label>
-                        <Form.Control onChange={handleValor} type="text" placeholder="Por favor coloque el nombre del producto" name='valor' />
+                        <Form.Control onChange={handleValor} type="text" placeholder="Por favor coloque el valor del producto" name='valor' />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3" controlId="formBasicEmail" >
                         <Form.Label>Imagen</Form.Label>
-                        <Form.Control onChange={handleImagen} type="text" placeholder="Por favor coloque el nombre del producto" name='imagen' />
+                        <Form.Control className="container-img"      onChange={handleImagen} type="text" placeholder="Por favor coloque la imagen" name='imagen' />
+                        
+                        <  img src={logo} />    
+                                        
                     </Form.Group>
 
                     
